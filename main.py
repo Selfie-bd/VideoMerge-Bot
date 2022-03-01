@@ -363,16 +363,8 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         await cb.message.edit(
             text=Config.START_TEXT,
             parse_mode="Markdown"
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [InlineKeyboardButton("🔰 Updates 🔰", url="https://t.me/groupdcbots")],
-                [InlineKeyboardButton("🛡️ Support Group 🛡️", url="https://t.me/groupdc"),
-                 InlineKeyboardButton("Dev 🤓", url="https://t.me/dcbotsa")],
-                [InlineKeyboardButton("⚙️ Settings ⚙️", callback_data="openSettings")],
-                [InlineKeyboardButton("Close", callback_data="closeMeh")]
-            ]
-        )
-             disable_web_page_preview=True
+            reply_markup=InlineKeyboardMarkup("🔰 Bot List 🔰", url="https://t.me/groupdcbots/7296"), InlineKeyboardButton("🛡️ Support Group 🛡️", url="https://t.me/groupdc")], [InlineKeyboardButton("Dev 🤓", url="https://t.me/selfiebd")]]),
+            disable_web_page_preview=True
         )
     elif "showThumbnail" in cb.data:
         db_thumbnail = await db.get_thumbnail(cb.from_user.id)
