@@ -363,7 +363,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         await cb.message.edit(
             text=Config.START_TEXT,
             parse_mode="Markdown"
-            reply_markup=InlineKeyboardMarkup("🔰 Bot List 🔰", url="https://t.me/groupdcbots/7296"), InlineKeyboardButton("🛡️ Support Group 🛡️", url="https://t.me/groupdc")], [InlineKeyboardButton("Dev 🤓", url="https://t.me/selfiebd")]]),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔰 Bot List 🔰", url="https://t.me/groupdcbots/7296"), InlineKeyboardButton("🛡️ Support Group 🛡️", url="https://t.me/groupdc")], [InlineKeyboardButton("Dev 🤓", url="https://t.me/selfiebd")]]),
             disable_web_page_preview=True
         )
     elif "showThumbnail" in cb.data:
